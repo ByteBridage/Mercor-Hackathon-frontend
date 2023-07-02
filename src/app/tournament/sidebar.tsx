@@ -1,8 +1,16 @@
 'use client'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import sampleTournaments, { Tournament } from '../utils/sampleData';
 
 export default function Sidebar(){
     const router = useRouter()
+
+    const [tournaments, setTournaments] = useState<Tournament[]>([]);
+    useEffect(() => {
+      setTournaments(sampleTournaments);
+    }, []);
+
     return (
     
         <>
@@ -23,32 +31,15 @@ export default function Sidebar(){
                         <span className="flex-1 ml-3 whitespace-nowrap">Tournament List</span>
                       </div>
                   </li>
-                  <li>
+
+                  {tournaments.map((tournament: Tournament) => (
+                  <li key={tournament.name}>
                       <div  onClick={() => router.push('/competitions')} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Tournament 1</span>
+                        <span className="flex-1 ml-3 whitespace-nowrap"> - {tournament.name}</span>
                       </div>
                   </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Tournament 2</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Tournament 3</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Tournament 4</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Tournament 5</span>
-                      </div>
-                  </li>
+                  ))}
                   
                 </ul>
                 <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
