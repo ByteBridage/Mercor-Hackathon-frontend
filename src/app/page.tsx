@@ -6,7 +6,7 @@ export default function Page() {
   const router = useRouter()
  
   return (
-    <button type="button" onClick={() => router.push('/dashboard')}>
+    <button type="button" onClick={() => router.push('/signin')}>
       Dashboard
     </button>
   )
