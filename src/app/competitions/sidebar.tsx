@@ -29,26 +29,6 @@ export default function Sidebar(){
                         <span className="flex-1 ml-3 whitespace-nowrap"> - Competition 1</span>
                       </div>
                   </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Competition 2</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Competition 3</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Competition 4</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <span className="flex-1 ml-3 whitespace-nowrap"> - Competition 5</span>
-                      </div>
-                  </li>
                   
                 </ul>
                 <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
